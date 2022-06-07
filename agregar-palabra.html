@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-divice-width">
+        <title>Juego del Ahorcado</title>
+        <link rel="stylesheet" href="style.css">
+        
+   </head>
+
+   <body>
+    <div class="logo">
+        <img class="logoimg" src="img/Logo.png">
+      </div>
+       
+        <div class="area1">
+            <input type="text" class="text-area1" id="inputTexto"  placeholder="Ingrese una palabra">
+
+        </div>
+        <div class="button-area1">
+            <p id="nota">&#9888 Máximo de 8 letras</p>
+            <button type="button" id="btn-guardar-empezar" onclick="agregarPalabra()"> Guardar y empezar </button>
+            <a id="btn-cancelar" href="index.html">Cancelar</a>
+        </div>
+    
+       <script type="text/javascript"  src="./palabra.js"></script>
+   
+    </body>
+</html>

@@ -1,7 +1,8 @@
 ;(function(){
 "use strict"
 
-var palabras = ["ALURA", "NIÑO", "AFINIDAD", "PROGRAMAR", "ORACLE", "YOUTUBE"]
+var palabras = ["ALURA", "ESFUERZO", "VERDAD", "PROGRAMAR", "ORACLE", "REALIDAD"]
+localStorage.setItem('palabras', JSON.stringify(palabras))
 
 var juego = null
 var finalizado = false
@@ -12,12 +13,30 @@ var $html = {
     errado: document.querySelector(".errado")
 }
 
+function capturar() {
+
+    function texto(Palabra){
+        this.Palabra=Palabra;
+    }
+    var palabraNueva = document.getElementById("inputTexto").value.toUpperCase();
+    otraPalabra = new texto(palabraNueva);
+    Agregar();
+    
+    
+}
+
+function Agregar (){
+    palabras.push(otraPalabra);
+
+}
+console.log(palabras)
+
 function dibujar(juego) {
     var $elem
     $elem = $html.hombre
 
     var estado = juego.estado
-    if (estado == 8){
+    if (estado == 9){
         estado = juego.previo
     }
     $elem.src = "./img/estados/0" + estado + ".png"
@@ -54,7 +73,7 @@ function dibujar(juego) {
 
 function adivinar(juego, letra){
     var estado = juego.estado
-    if (estado == 1 || estado == 8){
+    if (estado == 1 || estado == 9){
         return
     }
     var adivinado = juego.adivinado
@@ -71,7 +90,7 @@ function adivinar(juego, letra){
         
         if (juego.restante == 0){
             juego.previo = juego.estado 
-            juego.estado = 8   
+            juego.estado = 9   
         }
     } else {
         juego.estado--
@@ -87,7 +106,7 @@ window.onkeypress = function adivinarLetra(e){
     }
     adivinar(juego, letra)
     var estado = juego.estado
-    if (estado == 8 && !finalizado){
+    if (estado == 9 && !finalizado){
         setTimeout(alertaGanado, 0)
         finalizado = true 
     }else if (estado == 1 && !finalizado){
@@ -104,7 +123,7 @@ window.nuevoJuego = function nuevoJuego() {
     var palabra = palabraAleatoria()
     juego = {}
     juego.palabra = palabra
-    juego.estado = 7
+    juego.estado = 8
     juego.adivinado = new Set()
     juego.errado = new Set()
     finalizado = false
@@ -134,8 +153,13 @@ function alertaPerdido(palabra){
 
 }
 
+
 nuevoJuego()
 
 
 
 }())
+
+//agragar palabra//
+
+

@@ -9,12 +9,111 @@ body{
 html{
     font-size: 16px;
 }
+
+/*Pagina inicio*/
+.logoimg{
+    margin-top: 1%;
+    margin-left: 5%;
+    float: inherit;
+
+}
+
+#btn-inicio-01{
+    padding: 24px;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    left: 650px;
+    top: 300px;
+    border-radius: 15px;
+    border: solid 1px #0a3871;
+    color: #0a3871;
+    cursor: pointer;
+    background-color: #0a3871;
+    box-shadow: 0px 10px 24px -8px rgba(0,0,0, 0.78);
+    color: #fff;
+    border-color: #000;
+    text-decoration: none;
+    text-align: center;
+    
+}
+#btn-inicio-02{
+    padding: 14px;
+    position: absolute;
+    width: 180px;
+    height: 20px;
+    left: 670px;
+    top: 405px;
+    border-radius: 15px;
+    border: solid 1px #0a3871;
+    color: #0a3871;
+    cursor: pointer;
+    background: inherit;
+    box-shadow: 0px 10px 24px -8px rgba(0,0,0, 0.78);
+    color: #000;
+    border-color: #000;
+    text-decoration: none;
+    text-align: center;
+  
+    
+}
+
+/*pagina agregar palabra*/
+.text-area1{
+    margin-left: 380px;
+    margin-top: 120px;
+    width: 40%;
+    height: 60%;
+    color: #0A3871;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background: #f3f5fc;
+}
+#nota{
+    margin-left: 15%;
+    color: #0A3871;
+    
+}
+.button-area1{
+    margin-left: 220px;
+    margin-top: 300px;
+    width: 70%;
+    height: auto;
+    border-radius: 24px; 
+
+}
+#btn-guardar-empezar{
+    padding: 20px;
+    width: 30%;
+    height: 60%;
+    margin-left: 15%;
+    border-radius: 24px;
+    background: #0A3871;
+    box-shadow: 0px 10px 24px -8px rgba(0,0,0, 0.78);
+    border: none;
+    color: #E5E5E5;
+}
+
+#btn-cancelar{
+    padding: 20px 140px;
+    width: 30%;
+    height: 60%;
+    margin-left: 7%;
+    border-radius: 24px;
+    background: #f3f5fc;
+    box-shadow: 0px 10px 24px -8px rgba(0,0,0, 0.78);
+    border-color: #A9A9A9;
+    text-decoration: none;
+    
+}
+
+/*Pagina de juego*/
 #hombre{
     max-width: 100%;
     max-height: 100%;
     display: inset-block;
 }
-
 .hombre-ahorcado{
     width: 100vw;
     text-align: center;
@@ -51,7 +150,8 @@ html{
 .errada{
     margin-left: 1rem;
 }
-[type="button"]{
+
+.btn-juego-01{
     width: 15rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -59,16 +159,29 @@ html{
     color: #0a3871;
     background: inherit;
     cursor: pointer;
-
-}
-.btn-1{
     background-color: #0a3871;
+    box-shadow: 0px 10px 24px -8px rgba(0,0,0, 0.78);
     color: #fff;
     border-color: #000;
+    
 
 }
-.botones{
+.btn-juego-02{
+    width: 15px;
+    padding: 1rem 6rem;
+    border-radius: 1rem;
+    border: solid 1px #0a3871;
+    color: #0a3871;
+    background: inherit;
+    cursor: pointer;
+    border-color: #000;
+    box-shadow: 0px 10px 24px -8px rgba(0,0,0, 0.78);
+    text-decoration: none;
     text-align: center;
-    margin-top: 3rem;
-   
+
+}
+
+.botones-juego{
+    text-align: center;
+    margin-top: 3rem; 
 }
