@@ -7,7 +7,7 @@ function agregarPalabra(){
     alert(palabrasLocalNew);
     localStorage.setItem('palabras', palabrasLocalNew);
 
-    location.href = "juego.html";  
+    location.href = "/html/Juego.html";  
    
 }
 

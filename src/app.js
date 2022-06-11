@@ -39,7 +39,7 @@ function dibujar(juego) {
     if (estado == 9){
         estado = juego.previo
     }
-    $elem.src = "./img/estados/0" + estado + ".png"
+    $elem.src = "/img/estados/0" + estado + ".png"
     
     var palabra = juego.palabra
     var adivinado = juego.adivinado
